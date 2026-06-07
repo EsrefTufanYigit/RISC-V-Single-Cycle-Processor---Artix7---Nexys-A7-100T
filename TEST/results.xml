@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1780827961" />
+    <testcase name="Single_cycle_test" classname="Single_Cycle_Test" file="C:\Users\ilayd\Desktop\RISC-V\Yeni klasör\_tb\Test_exp2\Single_Cycle_Test.py" lineno="220" time="3.4494757652282715" sim_time_ns="5005000.0" ratio_time="1450945.1118491306" />
+  </testsuite>
+</testsuites>
