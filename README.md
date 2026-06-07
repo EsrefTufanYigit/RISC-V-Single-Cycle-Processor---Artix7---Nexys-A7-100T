@@ -16,7 +16,7 @@ This core implements the **RV32I Base Integer Instruction Set** and features a c
 * **Golden Model Verification:** A highly robust Python-based testbench utilizing `cocotb` that co-simulates the Verilog hardware against a custom Python RISC-V ISA emulator, cross-referencing all 32 registers and the Program Counter on every clock edge.
 
 ### System Architecture
-![RISC-V Datapath Diagram](./Datapath.png)
+![RISC-V System_Architecture Diagram](./System_Architecture.png)
 
 ## 📜 Supported Instruction Set
 
