@@ -16,7 +16,7 @@ This core implements the **RV32I Base Integer Instruction Set** and features a c
 * **Golden Model Verification:** A highly robust Python-based testbench utilizing `cocotb` that co-simulates the Verilog hardware against a custom Python RISC-V ISA emulator, cross-referencing all 32 registers and the Program Counter on every clock edge.
 
 ### System Architecture
-![RISC-V Datapath Diagram](./Images/Datapath.png)
+![RISC-V Datapath Diagram](./Datapath.png)
 
 ## 📜 Supported Instruction Set
 
@@ -43,7 +43,7 @@ The processor extends its capabilities via an MMIO SPI peripheral, mapped to the
 | `0x00000408` | **RX_Data** | 32-bit | Read | Holds the received bytes after a transaction. |
 
 ### SPI Finite State Machine
-![SPI State Machine](./Images/SPI_FSM.png)
+![SPI State Machine](./SPI_FSM.png)
 
 ## 🛠️ Hardware Implementation (FPGA)
 
@@ -52,7 +52,7 @@ The design is synthesized and targeted for the **Digilent Nexys A7-100T (Artix-7
 * **I/O Routing:** CPU debug states and ADXL362 accelerometer axes data (X, Y, Z) are routed to the on-board 7-Segment Displays and LEDs via slide switches.
 
 ### RTL Schematic
-![RTL Schematic of Top Module](./Images/RTL_Schematic.png)
+![RTL Schematic of Top Module](./RTL_Schematic.png)
 
 ## 🧪 Verification Environment (Cocotb)
 
@@ -63,10 +63,10 @@ The verification environment avoids manual waveform checking by employing a Gold
 3.  **Automated Assertion:** On the falling edge of every clock cycle, the testbench asserts that the Verilog Register File and PC perfectly match the Python model's state. Any discrepancy instantly flags a failure.
 
 ### Verification Output
-![Cocotb Simulation Output showing Golden Model comparison](./Images/Cocotb_Verification.png)
+![Cocotb Simulation Output showing Golden Model comparison](./Cocotb_Verification.png)
 
 *Final regression summary confirming all tests passed successfully:*
-![Cocotb Regression Summary](./Images/Cocotb_Regression_Pass.png)
+![Cocotb Regression Summary](./Cocotb_Regression_Pass.png)
 
 ### Running the Simulation
 
